@@ -51,10 +51,11 @@ class Calculator:
         except ZeroDivisionError:
             print("You can't divide with 0.")
 
-    def square(self,a,b):
-        print(a**b)
-        data = f"{a} ** {b} = {a**b}"
+    def square(self,a):
+        print(a**2)
+        data = f"{a} ** 2 = {a**2}"
         self.save_history(data)
+
 
     def validate_entered_numbers(self,message):
         while True:
@@ -67,6 +68,12 @@ class Calculator:
                 print(" ")
 
     def get_numbers(self,choose_the_number):
+
+        if choose_the_number == 5:
+            a = self.validate_entered_numbers('Enter the value of a:')
+            self.square(a)
+            return 
+        
         a = self.validate_entered_numbers("Enter the value of a: ")
         b = self.validate_entered_numbers("Enter the value of b: ")
 
@@ -82,8 +89,7 @@ class Calculator:
         elif choose_the_number == 4:
             self.divide(a,b)
 
-        elif choose_the_number == 5:
-            self.square(a,b)
+
 
 def main():
 
