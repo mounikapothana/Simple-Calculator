@@ -24,6 +24,7 @@ A console-based calculator application developed using Python and Object Oriente
 3. Run: 
 ```bash
 python console_calculator.py
+```
 
 ##Author 
 **Mounika**
